@@ -1,0 +1,92 @@
+/* Globalni stilovi aplikacije */
+html, body { height: 100%; margin: 0; }
+body { font-family: Roboto, Arial, sans-serif; background: #f4f6f9; color: #222; }
+h1 { font-weight: 500; margin: 8px 0 16px; }
+h2 { font-weight: 500; margin: 24px 0 8px; font-size: 20px; }
+
+/* prijava i registracija */
+.centar { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box; }
+.kartica-forma { width: 100%; max-width: 460px; padding: 8px; }
+.kartica-forma form { margin-top: 16px; }
+.puna { width: 100%; }
+.red { display: flex; gap: 12px; }
+.red > * { flex: 1; }
+.ispod { margin-top: 16px; text-align: center; }
+.greska { color: #c62828; }
+
+/* izgled posle prijave */
+.traka { position: sticky; top: 0; z-index: 10; gap: 8px; background: #1565c0 !important; color: #fff !important; }
+.traka button { color: #fff !important; }
+.traka .naslov { font-size: 18px; }
+.razmak { flex: 1; }
+.korisnik { font-size: 14px; margin-right: 8px; }
+.kontejner { height: calc(100vh - 64px); }
+.meni { width: 240px; border-right: 1px solid #e0e0e0; }
+.meni .aktivna { background: rgba(0, 90, 200, 0.10); }
+.sadrzaj { padding: 24px; box-sizing: border-box; }
+
+/* forme i blokovi */
+.blok { margin-bottom: 20px; }
+.forma-red { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.forma-red mat-form-field { width: 200px; }
+.forma-red mat-form-field.usko { width: 130px; }
+.forma-red mat-form-field.sire { width: 360px; }
+.usko-polje { width: 200px; }
+.mali-select { width: 150px; }
+.napomena { color: #666; font-size: 13px; }
+
+/* tabele */
+.tabela { width: 100%; }
+.obicna-tabela { width: 100%; border-collapse: collapse; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.12); margin-bottom: 8px; }
+.obicna-tabela th, .obicna-tabela td { padding: 8px 10px; border-bottom: 1px solid #e6e6e6; text-align: left; vertical-align: top; font-size: 14px; }
+.obicna-tabela th { background: #eef2f7; font-weight: 500; }
+.obicna-tabela tr.ukupno td { font-weight: 700; background: #f7f9fc; }
+.akcije button, .akcije a { margin: 2px; }
+
+/* oznake statusa */
+.oznaka { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px; background: #e0e0e0; }
+.oznaka.slobodan, .oznaka.potvrdjena { background: #c8e6c9; color: #1b5e20; }
+.oznaka.zauzet, .oznaka.kreirana { background: #fff3cd; color: #7a5b00; }
+.oznaka.van_upotrebe, .oznaka.otkazana { background: #ffcdd2; color: #b71c1c; }
+.oznaka.realizovana { background: #d6e4ff; color: #0d3c99; }
+
+/* slike i galerija */
+.slicica { width: 64px; height: 48px; object-fit: cover; border-radius: 4px; }
+.galerija { display: flex; flex-wrap: wrap; gap: 16px; }
+.slika-okvir { display: flex; flex-direction: column; gap: 6px; background: #fff; padding: 8px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.slika-okvir img { width: 240px; height: 170px; object-fit: cover; border-radius: 4px; }
+.glavna-slika img { width: 100%; max-width: 720px; max-height: 420px; object-fit: cover; border-radius: 8px; }
+.mala-galerija { margin: 8px 0 20px; }
+.mala-galerija img { width: 100px; height: 70px; object-fit: cover; border-radius: 4px; cursor: pointer; opacity: .7; }
+.mala-galerija img.izabrana { opacity: 1; outline: 3px solid #1565c0; }
+
+/* ponuda (gost) */
+.mreza-kartica { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.kartica-apartman img { height: 190px; object-fit: cover; }
+.bez-slike { height: 190px; display: flex; align-items: center; justify-content: center; background: #e9edf2; color: #999; }
+.cena { font-size: 18px; font-weight: 500; color: #1565c0; }
+mat-icon.mala { font-size: 18px; height: 18px; width: 18px; vertical-align: middle; }
+.dve-kolone { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+/* izveštaji */
+.kartice-brojevi { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+.broj-kartica { background: #fff; padding: 12px 18px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,.12); text-align: center; min-width: 110px; }
+.broj-kartica .broj { font-size: 26px; font-weight: 700; color: #1565c0; }
+.traka-procenat { display: inline-block; width: 120px; height: 10px; background: #e0e0e0; border-radius: 5px; vertical-align: middle; overflow: hidden; }
+.traka-procenat div { height: 100%; background: #1565c0; }
+
+/* račun */
+.racun { background: #fff; padding: 32px; max-width: 800px; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+
+/* poruke (snackbar) */
+.poruka-uspeh .mdc-snackbar__surface { background: #2e7d32 !important; }
+.poruka-greska .mdc-snackbar__surface { background: #c62828 !important; }
+
+/* štampa računa: sakrij meni, traku i dugmad */
+@media print {
+  .ne-stampaj { display: none !important; }
+  .kontejner { height: auto; }
+  .sadrzaj { padding: 0; margin-left: 0 !important; }
+  .racun { box-shadow: none; }
+  body { background: #fff; }
+}
